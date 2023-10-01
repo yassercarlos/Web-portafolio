@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Barra de navegacion (background-image: url('imagenes/fondo3.jpg');     )*/
+nav{color: aliceblue;}
+i{
+    font-size: xx-large;
+    color: aliceblue;
+    text-decoration: none;
+}
+p{
+    
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+ 
+  animation-duration: 2s;   
+  }
+
+#inicio-seccions{
+    height: 90%;
+    display: flex;
+    flex-direction: column; /* Alinear el contenido verticalmente */
+    align-items: center; /* Alinear horizontalmente al centro */
+    justify-content: center; /* Alinear verticalmente al centro */      
+    
+    background-size: cover;
+    height: 800px;
+}
+.navegar {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Ajusta el espacio entre los elementos */
+    width: 50%;
+    height: 40%;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    
+}
+
+/* Estilo para los enlaces */
+.navegar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: inherit;
+}
+@media screen and (max-width:500px){
+    .navegar {
+        
+        width: 80%;
+        height: 40%;
+        
+    }
+}
+@media screen and (max-width:400px){
+    .navegar {
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Ajusta el espacio entre los elementos */
+        width: 90%;
+        height: 40%;
+        
+    }
+}
+
+
+.seccion {
+    display: block;
+  }
+
+  #inicio:checked~#inicio-seccion,
+  #sobremi:checked~#sobremi-seccion,
+  #habilidades:checked~#habilidades-seccion,
+  #portafolio:checked~#portafolio-seccion,
+  #contacto:checked~#contacto-seccion {
+    display: block;
+  }
+
+  /* Ocultar los elementos <input> */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Estilo personalizado para los labels que reemplazan los inputs */
+  label {
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el label */
+    padding-left: 25px;
+    /* Espacio a la izquierda para el icono */
+    position: relative;
+    /* Posición relativa para alinear el icono */
+  }
+
+  /* Estilo para los círculos que reemplazarán los inputs */
+  label::before {
+    content: "";
+    /* Añadir un elemento de contenido antes del label */
+    display: inline-block;
+    width: 20px;
+    /* Tamaño del círculo */
+    height: 20px;
+    background-color: transparent;
+    /* Color del círculo */
+    border: 2px solid #000;
+    /* Borde del círculo */
+    border-radius: 50%;
+    /* Hacer el círculo redondeado */
+    position: absolute;
+    /* Posición absoluta para alinear el círculo */
+    left: 0;
+    /* Colocar el círculo a la izquierda del label */
+    top: 50%;
+    /* Centrar verticalmente el círculo */
+    transform: translateY(-50%);
+    /* Alinear verticalmente el círculo */
+  }
+
+  /* Estilo para el círculo cuando el input está seleccionado */
+  input[type="radio"]:checked+label::before {
+    background-color: #000;
+    /* Cambiar el color del círculo seleccionado */
+  }
+
+
+
+
+.nomb-web .nomb{
+    margin-bottom: 0;
+}
+.nomb-web .web{
+    margin-bottom: 0;
+    margin-left: 1.9375rem;
+    color: rgb(147, 235, 235)
+}
+
+
+
+/* solo paara ubicar cada contenedor- luego se borra*/
+
+#sobremi-seccion{
+    border: solid rgb(11, 19, 19);
+}
+#portafolio-seccion{
+    border: solid rgb(0, 255, 76);
+}
+#contacto-seccion{
+    border: solid rgb(255, 0, 0);
+}
+#habilidades-seccion{
+    border: solid blue;
+}
+
+
+/*borrar*/
+
+@media screen and (min-width: 600px) and (max-width: 895px) {
+    .navegar {
+      width: 80%;
+      height: 40%;
+    }
+  
+    span{
+      
+      font-weight: 300;
+      color: aliceblue;
+    }
+  
+    .seccion-sobremi{
+      display:block;
+      height: 90%;
+    }
+  }
+  @media screen and (min-width: 450px) and (max-width: 600px) {
+    body{
+      font-size: 10px
+    }
+    span{
+      
+      font-weight: 200;
+      color: aliceblue;
+    }
+    .navegar {
+      width: 90%;
+      height: 40%;
+    }
+    
+  }
+  
+  
+  @media screen and (max-width: 449px) {
+    .navegar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .625rem; /* Ajusta el espacio entre los elementos */
+      width: 90%;
+      height: 40%;
+    }
+    .contenedor-sobremi {      
+    width: 50%;
+    height: 90%;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+  }
+  
+  }
+  

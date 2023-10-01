@@ -1,0 +1,316 @@
+* {  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', serif;
+}
+html{
+  /* me permite deslizar cuando hago clic en los links del menu */
+  scroll-behavior:smooth;
+}
+/*SECCION INICIO*/
+.seccion-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  color: rgb(255, 255, 255);
+  background-image: url("imagenes/fondo1.png");
+  background-size: cover;
+  height: 50rem;
+  animation: animateBg 5s linear infinite;
+}
+
+.seccion-inicio h1{  
+  font-size: 3.5em;
+  font-weight: 500;
+  /* referring directly to the animation's @keyframe declaration */
+  color: rgb(245, 218, 218);  
+ 
+}
+
+h2{  
+  margin-top: .9375rem;
+  margin-bottom: 1.5625rem;
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+h2:hover{
+  animation: bounce;
+  animation-duration: 2s;
+  color: rgb(240, 4, 4);  
+  
+}
+
+.navegar p{
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: aliceblue;
+}
+
+i {
+  font-size: 1.8rem;
+  color: rgb(9, 131, 238);
+  text-decoration: none;
+}
+.container-fluid .arriba{  
+  border-radius: 35%;
+  border: 1px solid rgb(8, 4, 243);  
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  position: fixed;  
+  top: 10%;
+  right: 10%;
+  z-index: 99;
+}
+
+@keyframes animateBg{
+  100%{
+    filter: hue-rotate(360deg);
+  }
+  
+}
+.navegar {
+  margin: 6.25rem;
+  padding-top: 1.25rem;
+  font-weight: 400;  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Ajustar el espacio entre los elementos */
+  width: 34.375rem;
+  height: 18.75rem;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border-right: .1875rem solid  rgb(248, 5, 5);
+  border-left: .1875rem solid  rgb(245, 3, 3);
+  border-radius: 1.5625rem;
+}
+
+/* Estilo para los enlaces */
+.navegar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+  /*SECCIÓN SOBRE MÍ*/
+.seccion-sobremi {  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;  
+  justify-content: center; 
+  padding: 1.5625rem;  
+  color: rgb(250, 249, 247);  
+  background-image: url("imagenes/fondo2.png");
+  background-size: cover;
+  height: 53.125rem;
+  animation: animateBg 5s linear infinite;
+  }
+
+.contenedor-sobremi {  
+  
+  margin-left: 1.125rem;
+  padding: 0 .9375rem .3125rem .9375rem;
+  width: 31.25rem;
+  height: 50rem;
+  text-align: justify;
+  background-color: transparent;
+  backdrop-filter: blur(25px);
+  border-radius: .9375rem;
+  border-right: .1875rem solid  rgb(248, 5, 5);
+  border-left: .1875rem solid  rgb(245, 3, 3);
+  overflow-y: auto;
+  }
+  .contenedor-sobremi p{
+    font-size: 1.4rem;
+  }
+
+
+
+.contenedor-datos { 
+  margin-left: 3.25rem;
+    margin-top: 11.25rem;
+    padding: 0 .9375rem .3125rem .9375rem;
+    width: 21.875rem;
+    height: 25rem;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    display: flex;  
+    text-align:justify;
+    flex-direction:column;   
+    font-size: 1.25rem;
+    border-radius: .9375rem;
+    border-right: .1875rem solid  rgb(248, 5, 5);
+  border-left: .1875rem solid  rgb(245, 3, 3);
+  }
+
+
+/*HABILIDADES*/
+
+.seccion-habilidades {  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;  
+  justify-content: center;
+  padding-top: 6.25rem;  
+  color: rgb(248, 247, 246);
+  background-image:  url("imagenes/fondo1.png");
+  background-size: cover;
+  height: 50rem;  
+  animation: animateBg 5s linear infinite;
+}
+
+
+.seccion-habilidades p{ 
+  font-size: 1.4rem;
+  font-weight: 300; 
+  text-align: center; 
+  color: rgb(255, 255, 255);
+}
+
+.seccion-habilidades .fila-habilidades .columna {  
+  display: flex;  
+  flex-direction:column ;
+  margin-left: 1.25rem;
+  width: 25rem;
+  height: 21.875rem;
+  text-align:justify; 
+  font-size: 1.4rem;
+  background-color: transparent;
+  backdrop-filter: blur(25px);  
+  border-radius: .9375rem;
+  border-right: .1875rem solid  rgb(248, 5, 5);
+  border-left: .1875rem solid  rgb(245, 3, 3);  
+}
+
+
+/* PORTAFOLIO*/
+
+
+.seccion-portafolio { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding-top: 6.25rem; 
+  color: rgb(245, 140, 2);   
+  background-image: url("imagenes/fondo2.png");
+  background-size: cover;
+  height: 46.875rem; 
+  animation: animateBg 5s linear infinite;   
+  
+}
+.contenedor-portafolio p{
+  font-size: 1.4rem;
+}
+
+.contenedor-portafolio{  
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5625rem;
+  text-align: center;
+  background-color: transparent;
+  backdrop-filter: blur(25px); 
+  text-decoration: none; 
+  height: 37.5rem;
+  width: 18.75rem;
+  border-radius: .9375rem;
+  border-right: .1875rem solid  rgb(248, 5, 5);
+  border-left: .1875rem solid  rgb(245, 3, 3);
+}
+
+.contenedor-portafolio a{   
+  color: antiquewhite;
+  text-decoration: none; 
+}
+/*CONTACTO*/
+
+.seccion-contacto {
+  padding: 6.25rem;
+  background-image: url("imagenes/fondo2.png");
+  animation: animateBg 5s linear infinite;
+  background-size: cover;
+}
+
+.contenedor-formulario form .envio{
+  justify-content: flex-start;
+  width: 25rem;
+}
+.seccion-contacto form{
+  padding: 1.5625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+.contenedor-formulario input, button, textarea{
+  padding: .3125rem;
+  width: 25rem;
+  font-size: 1.4rem;
+  color: rgb(241, 193, 130);
+  background-color: transparent;
+  backdrop-filter: blur(25px); 
+  border-radius: .625rem;
+  border-top: .0625rem solid  rgb(248, 5, 5);
+  border-bottom: .0625rem solid  rgb(245, 3, 3);
+}
+.contenedor-formulario textarea{
+  font-size: 1.3rem;
+}
+.contenedor-formulario button{
+  font-size: 1.3rem;
+}
+
+
+/*RESPONSIVE*/
+@media screen and (min-width: 600px) and (max-width: 895px) {
+  .seccion-sobremi{
+    display: block;
+    height: 81.25rem;
+  }
+  .contenedor-sobremi{
+    max-height: 50rem;    
+  }
+}
+.contenedor-datos{
+  margin-top: .9375rem ;
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 599px) {
+  body{
+    font-size: 8px;
+  }
+
+  
+  .navegar {
+    width: 25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .425rem; /* Ajusta el espacio entre los elementos */
+   
+  }
+  .seccion-sobremi{
+    font-size: 1em;
+    display: block;
+    height: 81.25rem;
+  }
+  .contenedor-sobremi{
+    width: 24.9375rem;
+    max-height: 50rem; 
+    overflow-y: auto;   
+  }
+}
+.contenedor-datos{
+  margin-top: .9375rem ;
+}
+
